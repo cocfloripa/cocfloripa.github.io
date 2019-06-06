@@ -31,7 +31,7 @@
 
 	function drawText(ctx, size, text, x, y) {
 		//Set the text styles
-		ctx.font = "bold " + size + "px Impact";
+		ctx.font = "bold " + size + "px Anton";
 		ctx.fillStyle = "#fff";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
