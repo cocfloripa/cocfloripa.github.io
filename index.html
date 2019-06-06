@@ -1,0 +1,54 @@
+<html ng-app="Meme">
+	<head>
+		<title>Gerador de Memes - COC Floripa</title>
+        <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/console-image.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			<header class="offset5" style="text-align:center;"><img src="" alt="COC Floripa | Escola SEB"></header>
+			<div class="container-fluid">
+                
+                				<div class="info span4">
+				    <fieldset>
+						<legend>Frases</legend>
+        
+                          <fieldset>
+                             <h4>Selecione um professor</h4> 
+						<select ng-model="selectedMeme" ng-init="selectedMeme = memes[0]" ng-change="alterMeme()" ng-options="m.name for m in memes">
+						<option value="" disabled selected>Selecione o professor</option>
+                              </select>
+                        </fieldset>
+                        <h4>Digite a frase que ele(a) mais fala</h4> 
+						<input width="75px" type="text" ng-model='toptext' ng-change="alterMeme()" placeholder="Frase 1"/>
+                    </fieldset>
+                    <fieldset>
+						<input type="text" ng-model='bottomtext' ng-change="alterMeme()" placeholder="Frase 2"/>
+                    </fieldset>
+                      
+				</div>
+				<div class="preview-wrap span8">
+					<legend> Preview </legend>
+					<div class="canvas"></div>
+				</div>
+				
+				<div class="info span4">
+				
+						<legend>Resultado</legend>
+                        <fieldset>
+                            <h4>Salve a imagem clicando no botão abaixo<br> e compartilhe com a gente :)</h4> 
+						<button class="btn btn-large btn-success" ng-click="create()">Salvar imagem</button>
+                    </fieldset>
+                    <fieldset>
+                <button class="btn btn-small btn-danger" onclick="location.reload();">Resetar</button></fieldset>
+				</div>
+                <footer style="text-align:center;color:#fff;">by <a href="http://instagram.com/cocfloripa">@cocfloripa</a> </footer>
+			</div>
+		</div>
+	</body>
+</html>
