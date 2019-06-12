@@ -3,7 +3,7 @@ angular.module('Meme',[])
 
 	$scope.toptext = '';
 	$scope.bottomtext = '';
-	$scope.selectedMeme ='10 Guy';
+	$scope.selectedMeme ='Baiano';
 	$scope.memes = [];
 
 	for(var key in console.list) {
@@ -37,5 +37,5 @@ angular.module('Meme',[])
 
 })
 .run(function() {
-	console.meme('','','10 Guy');
+	console.meme('','','Baiano');
 });
